@@ -1,0 +1,6 @@
+# Conversion To YAML From Properties Formar Report
+# Warnings:
+# - The Yaml File Had Comments Which Are Lost In The Refactoring!
+spring:
+  profiles:
+    active: dev

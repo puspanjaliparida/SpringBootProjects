@@ -1,0 +1,72 @@
+{"properties": [
+  {
+    "name": "org.nit.name",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.name'"
+  },
+  {
+    "name": "org.nit.contact",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.contact'"
+  },
+  {
+    "name": "org.nit.pincode",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.pincode'"
+  },
+  {
+    "name": "org.nit.addrs",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.addrs'"
+  },
+  {
+    "name": "org.nit.branches[0]",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.branches[0]'"
+  },
+  {
+    "name": "org.nit.phones[0]",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.phones[0]'"
+  },
+  {
+    "name": "org.nit.owners[0]",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.owners[0]'"
+  },
+  {
+    "name": "org.nit.idDetails.voterid",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.idDetails.voterid'"
+  },
+  {
+    "name": "org.nit.idDetails.aadharno",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.idDetails.aadharno'"
+  },
+  {
+    "name": "org.nit.idDetails.passpostno",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.idDetails.passpostno'"
+  },
+  {
+    "name": "org.nit.licenseDetails.issuedBy",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.licenseDetails.issuedBy'"
+  },
+  {
+    "name": "org.nit.licenseDetails.type",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.licenseDetails.type'"
+  },
+  {
+    "name": "org.nit.licenseDetails.lid",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.licenseDetails.lid'"
+  },
+  {
+    "name": "org.nit.licenseDetails.phones[0]",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.licenseDetails.phones[0]'"
+  }
+]}

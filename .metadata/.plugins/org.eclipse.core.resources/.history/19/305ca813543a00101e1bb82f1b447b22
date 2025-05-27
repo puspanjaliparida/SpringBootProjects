@@ -1,0 +1,28 @@
+//StockMgmtServiceImpl.java(25.05.2025)
+package com.nt.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.stereotype.Service;
+
+import com.nt.document.StockDetails;
+
+@Service
+public class StockMgmtServiceImpl implements IStockMgmtService {
+    @Autowired
+    private MongoTemplate template;
+    
+	@Override
+	public String registerStock(StockDetails details) {
+		String idVal=template.save(details).getId();
+		return "Stock is Saved with the id value: "+idVal;
+	}
+
+	@Override
+	public String registerMultipleStocks(List<StockDetails> list) {
+		int count=template.insertAll(list).size();
+		return count+" no. of docs are saved";
+	}
+}

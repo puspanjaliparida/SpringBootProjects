@@ -1,0 +1,8 @@
+//IStockMgmtService.java(25.05.2025)
+package com.nt.service;
+
+import com.nt.document.StockDetails;
+
+public interface IStockMgmtService {
+      public String registerStock(StockDetails details);
+}

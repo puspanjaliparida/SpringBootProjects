@@ -1,0 +1,75 @@
+//MongoRepositoryTestRunner.java(24.05.2025)
+package com.nt.runners;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.nt.document.Product;
+import com.nt.service.IProductMgmtService;
+
+@Component
+public class MongoRepositoryTestRunner implements CommandLineRunner {
+	   @Autowired
+       private IProductMgmtService prodService;
+	   
+	@Override
+	public void run(String... args) throws Exception {
+	/*	try {
+			Product prod=new Product();
+			prod.setName("milk");
+			prod.setPrice(300.0f);
+			prod.setQty(5.0f);
+			prod.setStatus("active");
+			prod.setCompany("Amul");
+			prod.setExpiryDate(LocalDate.of(2025, 10, 20));
+			//Use Service
+			String idVal=prodService.registerProduct(prod);
+			System.out.println("Product is Saved with id Value:: "+idVal);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}*/
+		
+		try {
+			Product prod=new Product();
+			prod.setName("chair");
+			prod.setPrice(3550.0f);
+			prod.setQty(5.0f);
+			
+			Product prod1=new Product();
+			prod1.setName("chair");
+			prod1.setPrice(6220.0f);
+			prod1.setQty(8.0f);
+			
+			Product prod2=new Product();
+			prod2.setName("chair");
+			prod2.setPrice(6000.0f);
+			prod2.setQty(10.0f);
+
+		    // Add all products to a list
+		    List<Product> productList = List.of(prod, prod1, prod2);
+
+		    // Use Service
+		    String result = prodService.registerMultipleProducts(productList);
+		    System.out.println("Products are Saved with idVal "+productList);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	   /*try {
+			prodService.showAllProducts().forEach(System.out::println);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}*/
+		
+		/*try {
+			Product prod=prodService.showProductById("68329c80307bd412bd0ffaad");
+			System.out.println("The Details are::"+prod);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}*/
+	}
+}

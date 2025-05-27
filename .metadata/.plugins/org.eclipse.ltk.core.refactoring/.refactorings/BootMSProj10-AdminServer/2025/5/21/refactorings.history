@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BootMSProj10-AdminServer/src/main/java/com/nt/BootMsProj10AdminServerApplication.java&apos; to &apos;BootMsProj10AdminServerApp.java&apos;" description="Rename resource &apos;BootMsProj10AdminServerApplication.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/com/nt/BootMsProj10AdminServerApplication.java" name="BootMsProj10AdminServerApp.java" stamp="1747935355354" updateReferences="true"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;BootProj08.2-Profiles-SingleYmlFile&apos;&#x0D;&#x0A;- Original project: &apos;BootProj08.2-Profiles-SingleYmlFile&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     application-dev.yml&#x0D;&#x0A;     application-prod.yml&#x0D;&#x0A;     application-test.yml&#x0D;&#x0A;     application-uat.yml" description="Delete elements" element1="src/main/resources/application-uat.yml" element2="src/main/resources/application-test.yml" element3="src/main/resources/application-dev.yml" element4="src/main/resources/application-prod.yml" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="4" stamp="1740027896758" subPackages="false" version="1.0"/>
+</session>

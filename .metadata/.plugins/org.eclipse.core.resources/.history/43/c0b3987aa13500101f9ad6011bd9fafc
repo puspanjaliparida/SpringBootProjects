@@ -1,0 +1,10 @@
+spring.application.name=ConfigServer
+
+#Server Port
+server.port=8888
+
+#Activate Native Profile
+spring.profiles.active=native
+
+#Link the Config Server with Native Config file(FileSystem Path)
+spring.cloud.config.server.native.search-locations=classpath:nconfig

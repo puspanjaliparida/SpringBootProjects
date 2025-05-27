@@ -1,0 +1,7 @@
+#Customer Information
+cust:
+   info:
+      custNo: 101
+      custName: "raja"
+      custAddrs: "hyd"
+      billAmt: 5678.21

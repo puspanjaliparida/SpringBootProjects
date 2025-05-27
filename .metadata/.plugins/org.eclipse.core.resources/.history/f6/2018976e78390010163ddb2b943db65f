@@ -1,0 +1,19 @@
+//MongoRepositoryTestRunner.java(24.05.2025)
+package com.nt.runners;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.nt.repository.IProductRepository;
+
+@Component
+public class MongoRepositoryTestRunner implements CommandLineRunner {
+	   @Autowired
+       private IProductRepository prodRepo;
+	   
+	@Override
+	public void run(String... args) throws Exception {
+		
+	}
+}

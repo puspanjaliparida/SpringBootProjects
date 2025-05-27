@@ -1,0 +1,4 @@
+spring.application.name=BootMVCProj15-EmbeddedServers
+
+#Embedded Server
+server.port=4041

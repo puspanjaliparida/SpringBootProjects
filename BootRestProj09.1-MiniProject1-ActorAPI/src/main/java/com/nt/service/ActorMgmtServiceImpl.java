@@ -1,0 +1,125 @@
+//ActorMgmtServiceImpl.java(28/29/30.04.2025)
+package com.nt.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.nt.entity.ActorEntity;
+import com.nt.repository.IActorRepository;
+import com.nt.vo.ActorVO;
+
+@Service("actorService")
+public class ActorMgmtServiceImpl implements IActorMgmtService {
+    @Autowired 
+	private IActorRepository actorRepo;
+    
+	@Override
+	public String insertActor(ActorVO actorVO) {
+        //Convert ActorVO Class Object To ActorEntity Class Object
+		ActorEntity actorEntity=new ActorEntity();
+		BeanUtils.copyProperties(actorVO, actorEntity);
+		actorEntity.setCreatedBy(System.getProperty("user.name"));
+		//Save the Object
+		int idVal=actorRepo.save(actorEntity).getAid();
+		return "Actor Object Is Saved With Id Value : "+idVal;
+	}//Method
+
+	@Override
+	public String insertActorsBatch(Iterable<ActorVO> actorsVO) {
+		//Convert List<ActorVO> to List<ActorEntity>Objects
+		List<ActorEntity> listEntities = new ArrayList();
+		actorsVO.forEach(vo->{
+			ActorEntity entity=new ActorEntity();
+			BeanUtils.copyProperties(vo, entity);
+			entity.setCreatedBy(System.getProperty("user.name"));
+			listEntities.add(entity);
+		});
+		//Use SaveAll Objects
+		Iterable<ActorEntity> savedEntities=actorRepo.saveAll(listEntities);
+		List<Integer> ids=StreamSupport.stream(savedEntities.spliterator(),false).map(ActorEntity::getAid).collect(Collectors.toList());
+		return ids.size()+"No. Of  Records Are Saved Having Is Values:: "+ids;
+	}//Method
+
+	@Override
+	public Iterable<ActorVO> showAllActors() {
+		//Use Service
+		Iterable<ActorEntity> listEntities=actorRepo.findAll();
+		//Convert List of Entities To List Of VO Class Objects
+		List<ActorVO> listVO=new ArrayList();
+		listEntities.forEach(entity->{
+			ActorVO vo=new ActorVO();
+			BeanUtils.copyProperties(entity, vo);
+			listVO.add(vo);
+		});
+		return listVO;
+	}//Method
+
+	@Override
+	public ActorVO showActorsById(int id) {
+		//Load The Object
+		ActorEntity entity=actorRepo.findById(id).orElseThrow(()-> new IllegalArgumentException("Invalid Id"));
+		//Convert ActorEntity Object to ActorVO Object
+		ActorVO vo=new ActorVO();
+		BeanUtils.copyProperties(entity, vo);
+		return vo;
+	}//Method
+
+	@Override
+	public Iterable<ActorVO> showActorsByFeeRange(double startFee, double endFee) {
+		// Use Repo
+		Iterable<ActorEntity> listEntities=actorRepo.findActorsByFeeRange(startFee, endFee);
+		//Convert ListEntities To listVO
+		List<ActorVO> listVO=new ArrayList();
+		listEntities.forEach(entity->{
+			//Convert Each Entity to Each VO class Object
+			ActorVO vo=new ActorVO();
+			BeanUtils.copyProperties(entity, vo);
+			listVO.add(vo);
+		});
+		return listVO;
+	}//Method
+
+	@Override
+	public String updateActor(ActorVO vo) {
+		//Use Repo To Load The Object
+		ActorEntity entity=actorRepo.findById(vo.getAid()).orElseThrow(()->new IllegalArgumentException("Invalid Id"));
+		//Copy VO Object Data To Entity Object
+		BeanUtils.copyProperties(vo, entity);
+		entity.setUpdatedBy(System.getProperty("user.name"));
+		//Update The Object
+		actorRepo.save(entity);
+		return vo.getAid()+" Actor Details Are Updated";
+	}//Method
+
+	@Override
+	public String updateActorFeeById(int id, double hikePercentage) {
+		// Use Repo To Load The Object
+		ActorEntity entity=actorRepo.findById(id).orElseThrow(()->new IllegalArgumentException("Invalid Id"));
+		entity.setFee(entity.getFee()+(entity.getFee()*hikePercentage/100.0));
+		//Update The Object
+		actorRepo.save(entity);
+		return id+" Actor Fee Is Updated";
+	}//Method
+
+	@Override
+	public String removeActorById(int id) {
+		//Load The Object
+		ActorEntity actor=actorRepo.findById(id).orElseThrow(()->new IllegalArgumentException("Invalid id"));
+		//Delete the Object
+		actorRepo.deleteById(id);
+		return id+" Actor has been Removed.";
+	}//Method
+
+	@Override
+	public String deleteActorsByFeeRange(double start, double end) {
+		// Use Service
+		int count=actorRepo.removeActorsByFeeRange(start, end);
+		return count+" no. of Actors are removed.";
+	}//Method
+}//Class

@@ -1,0 +1,13 @@
+package com.nt.service;
+
+import com.nt.document.StockDetails;
+
+public class StockMgmtServiceImpl implements IStockMgmtService {
+
+	@Override
+	public String registerStock(StockDetails details) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

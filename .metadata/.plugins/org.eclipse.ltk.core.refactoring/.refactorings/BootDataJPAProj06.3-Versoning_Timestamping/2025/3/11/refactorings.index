@@ -1,0 +1,7 @@
+1741707483474	Rename type 'BootDataJPAProj062Versoning_Timestamping'
+1741707484423	Rename type 'BootDataJPAProj062Versoning_TimestampingTests'
+1741707507405	Rename type 'CallerTuneInfo'
+1741707545928	Rename type 'ICallerTuneInfoRepository'
+1741707577041	Rename type 'VersioningAndTimeStampingTest'
+1741707625789	Rename type 'CallerTuneMgmtServiceImpl'
+1741707661212	Rename type 'ICallerTuneMgmtService'

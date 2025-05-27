@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BootMVCProj11-MiniProject-Interceptors&apos; to &apos;BootMVCProj11.1-MiniProject-Interceptors&apos;" description="Rename resource &apos;BootMVCProj11-MiniProject-Interceptors&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/BootMVCProj11-MiniProject-Interceptors" name="BootMVCProj11.1-MiniProject-Interceptors" stamp="1744391114143" updateReferences="true"/>
+</session>

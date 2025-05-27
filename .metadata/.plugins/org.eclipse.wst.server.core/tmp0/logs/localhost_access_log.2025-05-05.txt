@@ -1,0 +1,12 @@
+127.0.0.1 - - [05/May/2025:22:26:46 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [05/May/2025:22:26:48 +0530] "GET /BootRestProj09.3-MiniProject3-EmployeeAPI/ HTTP/1.1" 404 275
+0:0:0:0:0:0:0:1 - - [05/May/2025:22:26:48 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [05/May/2025:22:27:21 +0530] "POST /BootRestProj09.3-MiniProject3-EmployeeAPI/employee-api/register HTTP/1.1" 404 163
+0:0:0:0:0:0:0:1 - - [05/May/2025:22:27:29 +0530] "POST /BootRestProj09.3-MiniProject3-EmployeeAPI/employee-api/register HTTP/1.1" 404 163
+0:0:0:0:0:0:0:1 - - [05/May/2025:22:27:44 +0530] "POST /BootRestProj09.3-MiniProject3-EmployeeAPI/emp-api/register HTTP/1.1" 500 25
+0:0:0:0:0:0:0:1 - - [05/May/2025:22:28:28 +0530] "POST /BootRestProj09.3-MiniProject3-EmployeeAPI/emp-api/register HTTP/1.1" 201 45
+0:0:0:0:0:0:0:1 - - [05/May/2025:22:28:43 +0530] "POST /BootRestProj09.3-MiniProject3-EmployeeAPI/emp-api/all HTTP/1.1" 405 162
+0:0:0:0:0:0:0:1 - - [05/May/2025:22:28:50 +0530] "GET /BootRestProj09.3-MiniProject3-EmployeeAPI/emp-api/all HTTP/1.1" 200 116
+0:0:0:0:0:0:0:1 - - [05/May/2025:22:28:59 +0530] "GET /BootRestProj09.3-MiniProject3-EmployeeAPI/emp-api/update HTTP/1.1" 405 165
+0:0:0:0:0:0:0:1 - - [05/May/2025:22:29:08 +0530] "PUT /BootRestProj09.3-MiniProject3-EmployeeAPI/emp-api/update HTTP/1.1" 500 50
+0:0:0:0:0:0:0:1 - - [05/May/2025:22:29:18 +0530] "PUT /BootRestProj09.3-MiniProject3-EmployeeAPI/emp-api/update/1060 HTTP/1.1" 404 161

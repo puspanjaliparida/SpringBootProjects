@@ -1,0 +1,32 @@
+# Employee Info
+org:
+  nit:
+    # For Simple Properties
+    eno: 1001
+    ename: khushi
+    # For Array Property
+    favColors:
+      - red
+      - green
+      - blue
+    # For List Collection
+    nickNames:
+      - chinna
+      - munna
+      - rajib
+    # For Set Collection
+    phoneNumbers:
+      - 9938366
+      - 6388929
+      - 9562778
+    # For Map Collection
+    idDetails:
+      aadhar: 7839378199
+      voter: 67829ADS
+      panNo: 78288821
+    # For HAS-A Property
+    company:
+      id: 67388
+      name: HCL
+      addrs: hyd
+      size: 200

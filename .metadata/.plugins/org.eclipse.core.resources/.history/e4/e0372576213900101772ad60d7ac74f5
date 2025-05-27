@@ -1,0 +1,8 @@
+//IProductMgmtService.java(24.05.2025)
+package com.nt.service;
+
+import com.nt.document.Product;
+
+public interface IProductMgmtService {
+      public String registerProduct(Product prod);
+}

@@ -1,0 +1,5 @@
+1746461707587	Rename type 'ActorEntity'
+1746461731278	Rename type 'IActorRepository'
+1746462063707	Rename type 'ActorVO'
+1746462232853	Rename type 'ActorMgmtServiceImpl'
+1746462251143	Rename type 'IActorMgmtService'

@@ -1,0 +1,67 @@
+{"properties": [
+  {
+    "name": "org.nit.eno",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.eno'"
+  },
+  {
+    "name": "org.nit.ename",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.ename'"
+  },
+  {
+    "name": "org.nit.favColors",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.favColors'"
+  },
+  {
+    "name": "org.nit.phoneNumbers",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.phoneNumbers'"
+  },
+  {
+    "name": "org.nit.company.id",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.company.id'"
+  },
+  {
+    "name": "org.nit.nickNames",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.nickNames'"
+  },
+  {
+    "name": "org.nit.idDetails.aadhar",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.idDetails.aadhar'"
+  },
+  {
+    "name": "org.nit.idDetails.voter",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.idDetails.voter'"
+  },
+  {
+    "name": "org.nit.idDetails.panNo",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.idDetails.panNo'"
+  },
+  {
+    "name": "org.nit.company.name",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.company.name'"
+  },
+  {
+    "name": "org.nit.company.addrs",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.company.addrs'"
+  },
+  {
+    "name": "org.nit.company.size",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.company.size'"
+  },
+  {
+    "name": "org.nit.favColors[0]",
+    "type": "java.lang.String",
+    "description": "A description for 'org.nit.favColors[0]'"
+  }
+]}

@@ -1,0 +1,34 @@
+//ShoppingOperationsController.java(22.05.2025)
+package com.nt.ms;
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.nt.client.IBillingMSClientComp;
+
+@RestController
+@RequestMapping("/shopping-api")
+public class ShoppingOperationsController {
+	@Autowired
+	private IBillingMSClientComp client;
+	
+	@GetMapping("/purchase")
+     public ResponseEntity<String> doShopping(){
+		System.out.println("Client Component Proxy class name::"+client.getClass());
+		System.out.println("Proxy Class Implemented interfaces::"+Arrays.toString(client.getClass().getInterfaces()));
+		System.out.println("Proxy Class methods::"+Arrays.toString(client.getClass().getDeclaredMethods()));
+    	String msg="Shirt,Trouser items are purchased.";
+    	 //Invoke Target MS endpoint through client Component
+    	 ResponseEntity<String> resp=client.invokeDoBilling();
+    	 //Generate The final Result
+    	 String result=msg+"....."+resp.getBody();
+    	 //Return ResponseEntity Object
+    	 return new ResponseEntity<String>(result,HttpStatus.OK);
+     }
+}

@@ -1,0 +1,76 @@
+<html xmlns="http://www.thymeleaf.org">
+
+<body style="background-color: beige;">
+           <h1 style="color:orange;text-align:center;font-size: 40px">
+                <img th:src="@{/images/report.png}" height="60px"/>
+                <i>Employees Report</i>
+           </h1>
+           <div th:if="${!empsList.empty}">
+           <table border="1" align="center" bgcolor="gray">
+               <tr style="color:black">
+                   <th style="font-size: 25px"><i>EmpNo</i></th>
+                   <th style="font-size: 25px"><i>Ename</i></th>
+                   <th style="font-size: 25px"><i>Job</i></th>
+                   <th style="font-size: 25px"><i>Sal</i></th>
+                   <th style="font-size: 25px"><i>Deptno</i></th>
+               <tr>
+                <tr th:each="emp:${empsList}" style="color:navy;">
+                    <td style="font-size: 20px">
+                          <i>
+                              <b><span th:text="${emp.empno}" /></b>
+                          </i>
+                    </td>
+                    <td style="font-size: 20px">
+                          <i> 
+                              <b><span th:text="${emp.ename}" /></b>
+                          </i>
+                    </td>
+                    <td style="font-size: 20px">
+                          <i>
+                              <b><span th:text="${emp.job}" /></b>
+                          </i>
+                    </td>
+                    <td style="font-size: 20px">
+                          <i>
+                              <b><span th:text="${emp.sal}" /></b>
+                          </i>
+                    </td>
+                    <td style="font-size: 20px">
+                          <i>
+                              <b><span th:text="${emp.deptno}" /></b>
+                          </i>
+                    </td>
+                    <td>
+                            <a th:href="@{/emp-api/emp_edit(no=${emp.empno})}">
+                                 <img th:src="@{/images/edit.png}" width="50px"  height="50px"/>
+                            </a>
+                            <a th:href="@{/emp-api/emp_delete(no=${emp.empno})}" onclick="return confirm('Are U Sure That U Want To Delete Record?')">
+                                 <img th:src="@{/images/delete.png}" width="50px"  height="50px"/>
+                            </a>
+                     </td>
+                </tr>
+           </table>
+        </div>
+ 
+    <div th:if=${empsList.empty}>
+         <h1 style="color:red;text-align:center">Employees Not Found</h1>
+    </div>
+    
+<br>
+
+     <h2 style="color:green;text-align:center" th:text="${resultMsg}"/>
+
+
+<center>
+    <a th:href="@{/emp-api/emp_add}" style="font-size: 30px">
+         <img th:src="@{/images/add.png}" width="100px" height="100px" />
+         <b><i>Add Employee</i></b>
+    </a>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <a th:href="@{/emp-api/home}" style="font-size: 30px">
+        <img th:src="@{/images/home.png}" width="100px" height="100px" />
+        <b><i>Home</i></b>
+     </a>
+</center>
+</body>
+</html>

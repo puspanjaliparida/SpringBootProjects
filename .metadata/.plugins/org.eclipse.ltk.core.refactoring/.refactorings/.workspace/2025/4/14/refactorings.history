@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;BootMVCProj06-FormDataBinding&apos; to &apos;BootMVCProj06-FormDataBinding-HtmlTags&apos;" description="Rename resource &apos;BootMVCProj06-FormDataBinding&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/BootMVCProj06-FormDataBinding" name="BootMVCProj06-FormDataBinding-HtmlTags" stamp="1743745556931" updateReferences="true"/>
+</session>

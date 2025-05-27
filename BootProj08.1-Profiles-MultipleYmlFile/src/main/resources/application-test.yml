@@ -1,0 +1,12 @@
+# Conversion To YAML From Properties Formar Report
+# Warnings:
+# - The Yaml File Had Comments Which Are Lost In The Refactoring!
+spring:
+  application:
+    name: BootProj07-Profiles-Oracle-MySql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///ntspbms717
+    username: root
+    password: root
+    type: com.mchange.v2.c3p0.ComboPooledDataSource

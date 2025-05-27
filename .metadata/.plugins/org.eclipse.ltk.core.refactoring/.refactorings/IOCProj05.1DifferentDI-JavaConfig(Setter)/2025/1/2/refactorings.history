@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DependencyInjectionTest.java&apos; to &apos;IOCProj05.6DifferentDI-JavaConfig(Field)/src/com.nt.main&apos;&#x0D;&#x0A;- Original project: &apos;IOCProj05.1DifferentDI-JavaConfig(Setter)&apos;&#x0D;&#x0A;- Destination element: &apos;IOCProj05.6DifferentDI-JavaConfig(Field)/src/com.nt.main&apos;&#x0D;&#x0A;- Original element: &apos;com.nt.main.DependencyInjectionTest.java&apos;" description="Copy compilation unit" destination="=IOCProj05.6DifferentDI-JavaConfig\(Field)/src&lt;com.nt.main" element1="/src&lt;com.nt.main{DependencyInjectionTest.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1736139041371" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,38 @@
+//BillingMSClientComp.java(16.05.2025)
+package com.nt.client;
+
+import java.net.URI;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+
+@Component
+public class BillingMSClientComp {
+	  @Autowired
+	  private LoadBalancerClient client;
+	  
+	  public ResponseEntity<String> invokeDoBilling(){
+		  System.out.println("Client Component Class Name::"+client.getClass());
+		  //Get Target MS of Less Load  Instance From The Eureka Server
+		  ServiceInstance si=client.choose("BillingMS");
+		  
+		  //Get Endpoint Details of Target MS
+		  URI url=si.getUri();//Gives http://localhost:7071/billing-api
+		
+		  //Complete The URL
+		  String urlInfo=url+"/billing-api/bill";
+		  
+		  //Create RestTemplate Class Object
+		  RestTemplate template=new RestTemplate();
+		  
+		  //Invoke The Target MS Endpoint
+		  ResponseEntity<String> resp=template.exchange(urlInfo,HttpMethod.GET,null,String.class);
+		  return resp;
+	  }
+}

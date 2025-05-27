@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Doctor.java&apos; to &apos;BootDataJPAProj02-PagingAndSortingRepository/src/main/java/com.nt.entity&apos;&#x0D;&#x0A;- Original project: &apos;BootDataJPAProj01-CRUDRepository&apos;&#x0D;&#x0A;- Destination element: &apos;BootDataJPAProj02-PagingAndSortingRepository/src/main/java/com.nt.entity&apos;&#x0D;&#x0A;- Original element: &apos;com.nt.entity.Doctor.java&apos;" description="Copy compilation unit" destination="=BootDataJPAProj02-PagingAndSortingRepository/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.nt.entity" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.nt.entity{Doctor.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1741088680434" units="1" version="1.0"/>
+</session>

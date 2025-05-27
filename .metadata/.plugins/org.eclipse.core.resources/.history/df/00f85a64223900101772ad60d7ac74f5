@@ -1,0 +1,28 @@
+//ProductMgmtServiceImpl.java(24.05.2025)
+package com.nt.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.nt.document.Product;
+import com.nt.repository.IProductRepository;
+
+@Service
+public class ProductMgmtServiceImpl implements IProductMgmtService{
+    @Autowired
+    private IProductRepository prodRepo;
+    
+	@Override
+	public String registerProduct(Product prod) {
+		//Save The Document
+		String idVal=prodRepo.save(prod).getId();
+		return "Product is Saved With id value: "+idVal;
+	}
+
+	@Override
+	public List<Product> showAllProducts() {
+		return prodRepo.findAll();
+	}
+}

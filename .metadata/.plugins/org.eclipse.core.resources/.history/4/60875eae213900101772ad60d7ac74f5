@@ -1,0 +1,36 @@
+//MongoRepositoryTestRunner.java(24.05.2025)
+package com.nt.runners;
+
+import java.time.LocalDate;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.nt.document.Product;
+import com.nt.service.IProductMgmtService;
+
+@Component
+public class MongoRepositoryTestRunner implements CommandLineRunner {
+	   @Autowired
+       private IProductMgmtService prodService;
+	   
+	@Override
+	public void run(String... args) throws Exception {
+		try {
+			Product prod=new Product();
+			prod.setName("milk");
+			prod.setPrice(300.0f);
+			prod.setQty(5.0f);
+			prod.setStatus("active");
+			prod.setCompany("Amul");
+			prod.setExpiryDate(LocalDate.of(2025, 10, 20));
+			//Use Service
+			String idVal=prodService.registerProduct(prod);
+			System.out.println("Product is Saved with id Value:: "+idVal);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
