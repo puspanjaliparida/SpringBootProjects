@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-    <typeInfo handle="=BootDataMongoDBProj02-CustomMethods/C:\/Users\/Puspanjali\/.m2\/repository\/org\/springframework\/data\/spring-data-mongodb\/4.4.6\/spring-data-mongodb-4.4.6.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-mongodb=/=/maven.version=/4.4.6=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.mongodb.repository(MongoRepository.class[MongoRepository" modifiers="1537" timestamp="1748144089201"/>
-    <typeInfo handle="=BootDataMongoDBProj03-MongoTemplate/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.nt.service{IStockMgmtService.java[IStockMgmtService" modifiers="513" timestamp="1748277907824"/>
-    <typeInfo handle="=BootDataMongoDBProj01/C:\/Users\/Puspanjali\/.m2\/repository\/org\/springframework\/boot\/spring-boot\/3.4.6\/spring-boot-3.4.6.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.boot=/=/maven.artifactId=/spring-boot=/=/maven.version=/3.4.6=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.boot(CommandLineRunner.class[CommandLineRunner" modifiers="1537" timestamp="1747935211950"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>
