@@ -1,4 +1,0 @@
-spring.application.name=BootMSProj10-AdminServer
-
-#Admin Server Port
-server.port=3456
